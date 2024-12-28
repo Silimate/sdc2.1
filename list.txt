@@ -1,0 +1,8 @@
+tests/dc_risc_core.sdc
+tests/false_path1.sdc
+tests/false_path2.sdc
+tests/gated_clock1.sdc
+tests/gated_clock2.sdc
+tests/multicycle1.sdc
+tests/multicycle2.sdc
+tests/multicycle3.sdc

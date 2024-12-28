@@ -1,0 +1,26 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# run of sdc-parser to check one file"
+echo "# with enabling EDA callback procedure"
+echo "#"
+echo "# command line: sdcparser.tcl -eda eda_write_sdc.tcl tests/dc_risc_core.sdc"
+echo "#"
+echo 
+
+rm -f eda_result.sdc
+
+../sdcparser.tcl -eda ../eda_write_sdc.tcl ../tests/dc_risc_core.sdc
+
+echo
+echo "#"
+echo "# result of EDA-tool:"
+echo "#"
+echo 
+
+more eda_result.sdc
+
+echo
+echo "# end"
+echo

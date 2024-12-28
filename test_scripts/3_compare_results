@@ -1,0 +1,41 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# run of sdc-parser to check one file"
+echo "# with enabling EDA callback procedure"
+echo "# then run of sdc-parser to check results file"
+echo "# and comparing two results"
+echo "#"
+echo "# STEP 1"
+echo "# command line: sdcparser.tcl -eda eda_write_sdc.tcl tests/dc_risc_core.sdc"
+echo "#"
+echo 
+
+rm -f eda_result.sdc
+
+../sdcparser.tcl -eda ../eda_write_sdc.tcl ../tests/dc_risc_core.sdc
+
+echo
+echo "#"
+echo "# STEP 2"
+echo "# renaming eda_result.sdc to eda_result1.sdc"
+echo "# command line: sdcparser.tcl -eda eda_write_sdc.tcl eda_result1.sdc"
+echo "#"
+echo 
+
+mv -f eda_result.sdc eda_result1.sdc
+
+../sdcparser.tcl -eda ../eda_write_sdc.tcl eda_result1.sdc
+
+echo
+echo "#"
+echo "# result of comparing results:"
+echo "#"
+echo 
+
+diff -s eda_result1.sdc eda_result.sdc
+
+echo
+echo "# end"
+echo

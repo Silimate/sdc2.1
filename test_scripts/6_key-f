@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# run of sdc-parser to check list of files file"
+echo "#"
+echo "# command line: sdcparser.tcl -f list.txt"
+echo "#"
+echo 
+
+
+../sdcparser.tcl -f ../list.txt
+
+
+echo
+echo "# end"
+echo

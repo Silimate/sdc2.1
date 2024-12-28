@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# run of sdc-parser to check one file"
+echo "# with another sdc version"
+echo "#"
+echo "# command line: sdcparser.tcl -v 1.2 tests/dc_risc_core.sdc"
+echo "#"
+echo 
+
+
+../sdcparser.tcl -v 1.2 ../tests/dc_risc_core.sdc
+
+
+echo
+echo "# end"
+echo

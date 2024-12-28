@@ -1,0 +1,18 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# run of sdc-parser to check one file"
+echo "# with showing extended error messages"
+echo "#"
+echo "# command line: sdcparser.tcl -d2 tests/dc_risc_core.sdc"
+echo "#"
+echo 
+
+
+../sdcparser.tcl -d2 ../tests/dc_risc_core.sdc
+
+
+echo
+echo "# end"
+echo

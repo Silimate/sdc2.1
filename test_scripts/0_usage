@@ -1,0 +1,17 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# simle run of sdc-parser to show usage"
+echo "#"
+echo "# command line: sdcparser.tcl"
+echo "#"
+echo 
+
+
+../sdcparser.tcl
+
+
+echo
+echo "# end"
+echo

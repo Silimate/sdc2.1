@@ -1,0 +1,24 @@
+#!/bin/sh
+
+echo
+echo "#"
+echo "# run of sdc-parser to check one file"
+echo "# with saving error messages to log-file"
+echo "#"
+echo "# command line: sdcparser.tcl -l logfile.log tests/dc_risc_core.sdc"
+echo "#"
+echo 
+
+../sdcparser.tcl -l logfile.log ../tests/dc_risc_core.sdc
+
+echo
+echo "#"
+echo "# contents of log-file:"
+echo "#"
+echo
+
+more logfile.log
+
+echo
+echo "# end"
+echo
